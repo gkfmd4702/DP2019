@@ -8,6 +8,9 @@
                /* border: solid 1px black; */ /* 경계선 긋기 */
                /* margin: 10px; */ /* 서로간 여유공간 만들기 */
             }
+            header{
+                padding: 10px 50px; /* 상하 좌우 */
+            }
             header>ul>li{
                 float:left; /* 둥둥 떠다니게 : 왼쪽 기준 */
                 list-style: none; /* 목록-모습: 없음 */
@@ -51,7 +54,10 @@
                 margin:27px;
             }
             nav{
-                background-color:#eee;}
+                background-color: #ddd;
+                padding: 10px 50px;
+            }
+               
             #content>div:nth-child(1){
                 background-color:#98f;}
             #content>div:nth-child(2){
@@ -79,9 +85,52 @@
                 margin-left:200px;/*고정값*/
                 margin-left:auto;/*가변값*/
                 margin-right:auto;/*가변값*/
+
+                padding: 50px 0px;
             }
+            footer{
+                background-color: #555;
+                color: #ccc;
 
+                padding: 10px 50px;
+            }
+            footer>div>ul>li{
+                float:left;
+                list-style: none;
+                padding: 0px 10px; /* 상하 좌우 */
 
+                border-right:solid 2px gray;
+            }
+            footer>div>ul>li:nth-child(6){
+               border: none;
+            }
+            footer>div>ul{
+                padding:0px
+            }
+            footer>ul>li{
+                float: left;
+                list-style: none;
+                padding: 0px 10px /* 상하 좌우 */
+            }
+            footer>ul{
+                padding:0px;
+            }
+            #footer_left{
+                float: left;
+            }
+            #footer_right{
+                float: right;
+            }
+            #warp{
+                /* width: 1200px; /* 고정값 */
+                min-width: 1100px; /* 최소넓이 */
+                max-width: 1920px; /* 최대넓이 */
+                margin-left: auto;
+                margin-right: auto;
+            }
+            body{
+                margin: 0px;
+            }
         </style>
     </head>
     <body>
@@ -263,10 +312,40 @@
                                 </dd>
                             </dl>
                         </div>
-                        <div class="clear"></div><!—float left 해제—>
+                        <div class="clear"></div><!--float left 해제-->
                     </section>
                 </div>
             </div>
-            <footer>footer</footer>
-        </div>
-    </body>
+            <footer>
+                <div id="footer_left">
+                    <ul>
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Service</li>
+                        <li>Work</li>
+                        <li>Blog</li>
+                        <li>Contact Us</li>
+                        <div class="clear"></div><!--float left 해제-->
+                    </ul>
+                    <div id="copyright">ⓒ 2013 BlueBox. All Right Reserved.</div>
+
+                    <div>
+                      the loges in the design are the property
+                        of their respective owner/copyright
+                        holders.
+                    </div>
+                </div>
+                <ul id="footer_right"> <!-- 오른편 상자 역할 -->
+                    <li><img src= "images/layout1_footer_icon1.png"/></li>
+                    <li><img src= "images/layout1_footer_icon2.png"/></li>
+                    <li><img src= "images/layout1_footer_icon3.png"/></li>
+                    <li><img src= "images/layout1_footer_icon4.png"/></li>
+                    <li><img src= "images/layout1_footer_icon5.png"/></li>
+                    <li><img src= "images/layout1_footer_icon6.png"/></li>
+                    <div class="clear"></div><!--float left 해제-->
+                </ul>
+                <div class="clear"></div><!--float left 해제-->
+            </footer>
+        
+</body>
+</html>
