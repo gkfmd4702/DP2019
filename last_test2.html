@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>2jaeseok fan page</title>
+        <meta charset="utf-8" />
+        <style>
+           /* css 작성하는 곳 */ 
+           
+           body{
+               margin: 0px;
+           }
+          #wrap header{
+               background-color: white;
+               color: black;
+               padding: 10px 50px; /* 상하 좌우 */
+           }
+           #wrap header>h1{
+               margin: 0px;
+           }
+           #wrap header>h1>span:nth-child(1){
+               color: black;
+           }
+           #wrap header>h1>span:nth-child(2){
+               color: black;
+           }
+           #wrap header>nav li{
+               float: left;
+               list-style: none;
+               padding: 0px 10px; /* 상하 좌우 */
+               font-family: "OldSansBlack", sans-serif;
+               color: black;
+               text-decoration:none;
+               font-size: 150%;
+           }
+           #wrap header ul{
+               margin: 12px 0px;
+           }
+
+           header{
+      padding: 10px 50px; /* 상하 좌우 */
+      background-color: white;
+  }
+  header>ul>li{
+      float:left; /* 둥둥 떠다니게 : 왼쪽 기준 */
+      list-style: none; /* 목록-모습: 없음 */
+      padding-left: 10px; /* 바깥여백-왼쪽 */
+      padding-right: 10px; /* 바깥여백-오른쪽 */
+      border-right:solid 1px gray;/*경계선-오른쪽:실선 1px두꺠 회색*/
+  }
+  header>ul>li:nth-child(5){
+      border:none;/*경계선 : 없음*/
+  }
+  header>ul{
+      margin:11px;
+  }
+  #zoom{
+      margin:9px;
+  }
+  header>h1{
+      margin:0px;
+  }
+
+           .clear{
+                clear: both; /* 지우다: 양쪽 */
+                height: 0px; /* 높이: 0px */ 
+                overflow: hidden; /* 넘쳤을 때: 숨김 */
+            }
+            .float_left{
+                float: left;
+            }
+            .float_right{
+                float: right;
+            }
+            #main_visual{
+                background-image: url("images/Untitled-2.jpg");
+                height: 400px;
+                background-size: auto 100% ;
+                background-size: cover;
+                background-repeat: no-repeat;
+                /* repeat, no-repeat, repeat-x, repeat-y */
+                background-color: black;
+                background-position: 50% 50%; /* 가로 세로 */
+
+                color: white; /* 상속 */
+                text-align: center;
+
+                padding: 200px 0px; /* 상하 좌우 */
+            }
+            #main_visual_h2{
+                letter-spacing: 15px;
+                font-size: 35px;
+                margin: 8px 0px; /* 상하 좌우 */
+            }
+            #main_visual img{
+                margin-top: 70px;
+            }
+
+            #title_top{
+                font-size: 20px;
+            }
+            #title_bottom{
+                font-size: 15px;
+            }
+            section{
+                text-align: center;
+            }
+            section h3{
+                color: #02918c;
+                font-size: 25px;
+                font-weight: normal;
+                margin: 50px 0px
+            }
+            section p{
+                margin: 50px 100px;
+            }
+            section #about_list{
+                padding: 0px;
+                margin: 0px 50px;
+            }
+            section dd{
+                margin: 0px;
+            }
+            section>#about_list>li{
+                float: left;
+                width: 200px; /* 고정값 */
+                width: calc(25% - (1px / 4 * 3) - 30px - 30px);
+
+                list-style: none;
+                border-right: solid 1px grey;
+                padding: 30px;
+            }
+            section>#about_list>li:nth-child(4){
+               border: none;
+            }
+            #work_list>li{
+                float:left;
+                list-style: none;
+                width: 25%;
+            }
+            #work_list img{
+                width: 100%; /*있을 수 있는 공간 100% 기준 */
+                display: inline; /* 원래 이미지의 출력방식 */
+                display: block; /* 블록형으로 변경 */
+            } 
+            #work_list{
+                padding: 0px;
+                margin: 0px;
+            }
+            #wrap{
+                min-width: 1000px;
+                max-width: 1920px;
+                margin-left: auto;
+                margin-right: auto;
+
+            }
+            
+             body{
+                background-color:white;
+            }
+            .short_line{
+                border-bottom: solid 1px gray;
+                width: 30px;
+                margin: 10px 0px; /* 상하 좌우 */
+            }
+            .long_line{
+                border-bottom: solid 1px gray;
+                width: 90px;
+                margin: 10px 0px; /* 상하 좌우 */
+            }
+            header ul{
+                padding: 0px;
+            }
+            header li{
+                float: left;
+                list-style: none;
+                padding: 0px 20px 0px 0px;
+                /* 상 우 하 좌 (위부터 시계방향) */
+            }
+            .clear{
+                clear: both; /* 지우다: 양쪽 */
+                height: 0px; /* 높이: 0px */ 
+                overflow: hidden; /* 넘쳤을 때: 숨김 */
+            }
+            .category{
+                background-color: black;
+                color: white;
+                display: inline-block;
+                padding: 2px 5px 5px 5px;
+                position: static; /* 위치 : 정적인(기본) */
+                position: absolute; /* 절대적인 */
+
+                bottom: 0px;
+                left: 0px;
+            }
+            .visual{
+                position: relative; /* 관계형 */
+                /* 자식이 absolute일 경우 relative인 부모가 
+                위치 설정의 기준이 됨 */
+            }
+            .visual img{
+                display: inline; /*표시방식: 인라인형 */
+                display: block; /*표시방식: 블록형 */
+            }
+            #content ul{
+                padding: 0px;
+            }
+            .card{
+                background-color: white;
+                border-right: solid 1px white;
+                border-bottom: solid 1px white;
+
+                width: 310px;
+                display: inline-block;  
+                list-style: none;
+                margin: 15px;
+            }
+            .info{
+                padding: 10px;
+            }
+            .info dl{
+                margin: 0px;
+            }
+            .info dd{
+                margin: 0px;
+                font-size: 9px; /* 상속 */
+            }
+            .info dt{
+                font-weight: bold;
+            }
+            #b_s{
+        list-style: none;
+    }
+    #banner{
+        width: 700px;
+        margin:  auto;
+        position: relative;
+        overflow: hidden;
+    }
+    .slide{
+        width: 2100px; position:relative;
+    }
+    .slide>li {
+        width: 700px;
+        float: left;
+        height: 400px;
+    }
+    .slide>li>img {
+        width: 100%;
+        height: 100%;
+    }
+            #footer_left{
+                float: left;
+            }
+            #footer_right{
+                float: right;
+            }
+            .main_header{
+      padding: 10px 10px; /* 상하 좌우 */
+      background-color: white;
+      background-color: #555;
+  }
+  .main_header>ul>li{
+      float:left; /* 둥둥 떠다니게 : 왼쪽 기준 */
+      list-style: none; /* 목록-모습: 없음 */
+      padding-left: 10px; /* 바깥여백-왼쪽 */
+      padding-right: 10px; /* 바깥여백-오른쪽 */
+      border-right:solid 1px gray;/*경계선-오른쪽:실선 1px두꺠 회색*/
+  }
+  .main_header>ul>li:nth-child(5){
+      border:none;/*경계선 : 없음*/
+  }
+  .main_header>ul{
+      margin:11px;
+  }
+  .main_header>h1{
+      margin:0px;
+  }
+  .main_header a:link{ color: #ccc; text-decoration: none; }
+            a:visited{ color: #ccc; }
+            .main_header a:hover{ color: gray;}
+            .main_header li:hover{
+                  color: gray;
+                  font-size: 20px;
+            }
+            nav{
+                margin: 0px;
+            }
+            a{
+                padding: 0px 10px;
+                font-size: 16px;
+            }
+            #index_footer footer{
+                background-color: white;
+                color: black;
+
+                padding: 10px 50px;
+            }
+            #index_footer footer>div>ul>li{
+                float:left;
+                list-style: none;
+                padding: 0px 10px; /* 상하 좌우 */
+
+                border-right:solid 2px gray;
+            }
+            #index_footer footer>div>ul>li:nth-child(6){
+               border: none;
+            }
+            #index_footer footer>div>ul{
+                padding:0px
+            }
+            #index_footer footer>ul>li{
+                float: left;
+                list-style: none;
+                padding: 0px 10px /* 상하 좌우 */
+            }
+            #index_footer footer>ul{
+                padding:0px;
+            }
+            #index_footer #footer_left{
+                float: left;
+            }
+            #index_footer #footer_right{
+                float: right;
+            }
+        </style>
+       <script src="http://code.jquery.com/jquery-latest.js"></script>
+    </head>
+    <body>
+            <header class= "main_header">
+                    <nav>
+                       <a href="index.html"target="_blank">index</a>
+               
+                       <a href="layout1.html"target="_blank">layout1</a>
+               
+                       <a href="layout2.html"target="_blank">layout2</a>
+               
+                       <a href="layout3.html"target="_blank">layout3</a>
+               
+                       <a href="last_test2.html"target="_blank">자유페이지</a>
+                       <div class= "clear"></div>
+                     </nav>
+                    </header>
+            <div style= "text-align: center">
+        <div id="wrap">
+     '       
+            <header>
+                <h1 class="float_left">
+                    <!-- div span -->
+                    <span>2</span><span>JaeSeok</span>
+                </h1>
+                <nav class="float_right">
+                       
+                   <ul>
+                     <li>PROFILE</li>
+                     <li>VIDEO</li>
+                     <li>PHOTO</li>
+                     <li>WORK</li>
+                     <li>CONTACT ME</li>
+                     <div class="clear"></div>
+                   </ul>
+                </nav>
+                <div class="clear"></div>
+            </header>
+
+            <div id="main_visual">
+                <div id="title_top">For the poet is light and winged and holy thing</div>
+                <h2>inspired and is out of his senses</h2>
+                <div id="title_bottom">for not by art does the poet sing, but by power divine</div>
+                <img src="images/layout2_buttona.png"/>
+            </div>
+            
+            </style>
+            <br><br/>
+            
+        
+
+                <div style= "text-align: center";>
+                <style>
+                        body { color: white; font-size: 12px;}
+                        p { color: white; }
+                    </style>
+                    <h1>PROFILE</h1>
+
+
+<br><br/>
+
+
+<style>
+        .contants2
+        {
+            width: 800px;
+            height: 300px;
+            background-color: white;
+            margin: auto;
+        }
+    
+        .img
+        {
+            width: 400px;
+            height: 10px;
+            float: left;
+            margin-top:20px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .text
+        {
+            width: 400px;
+            height: 500px;
+            margin-top:70px;
+            float: right;
+            background-color: white;
+            text-align: left;
+            
+        }
+        
+    </style>
+    <div class="contants2">
+        <div class="img">
+            <img src="images/1.jpg" width="300px"/> 
+        </div> 
+        <div class="text">
+        이름: 이재석(Lee Jae Seok)
+    
+    
+    
+        <br><br/>
+    <style>
+            body { color: black; font-size: 12px;}
+            p { color: white; }
+        </style>
+    <br>
+     <!-- parent 부모-->
+        소속사: LSAC
+    
+    <br/>
+    <br><br/>
+    
+    직업: 모델
+    <br><br/>
+    <br>
+    경력: 2019 프라다 상하이 S/S 20 맨즈쇼 모델
+    <br><br/>
+             2019 아미 알렉산더 마티우시 S/S 20 모델
+          <br><br/>
+               2019 아미리 S/S 20 맨즈쇼 모델<br><br/>
+                2019 앤 드뮐미스터 S/S 20 맨즈쇼 모델
+    <br/>
+    
+    
+    <br/>
+    <br/>
+    
+   
+    신체: 187cm
+    <br/>
+    </div>
+    </div>
+    
+    
+        </style>
+
+      
+
+            <video width= "1280px" height:= "720px" controls>
+                <source src="./media/LSACmodel_이재석_LEDEBUTmagazine_film.mp4" type="video/mp4" />
+                <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+            </video>
+
+            <br><br/>
+            <br><br/>
+            <br><br/>
+            <br><br/>
+            <br><br/>
+            <br><br/>
+
+
+            <div id="contents" >
+                    <div style= "text-align: center"></div>
+                    <ul>
+                        <li class="card">
+                            <div class="visual">
+                                  <img src="./images/lllllll.jpg">
+                                 
+                            </div>
+                            <div class="info">
+                                <dl>
+                                    <dt>CMMNSWDN Awards</dt>
+                                    <dd>
+                                        <div>12th October 2018</div>
+                                       
+                                        <p>
+                                               
+                                        </p>
+                                       
+                                       
+                                    </dd>
+                                </dl>
+                             
+                            </div>
+                        </li>
+    
+                        <li class="card">
+                            <div class="visual">
+                                  <img src="./images/q.jpg">
+                                  
+                            </div>
+                            <div class="info">
+                                <dl>
+                                    <dt>LSAC MODEL</dt>
+                                    <dd>
+                                        <div>20th</div>
+                                        
+                                        <p>
+                                               
+                                        </p>
+                                       
+                                        
+                                    </dd>
+                                </dl>
+                             
+                            </div>
+                        </li>
+    
+                        <li class="card">
+                            <div class="visual">
+                                  <img src="./images/aq.jpg">
+                                  
+                            </div>
+                            <div class="info">
+                                <dl>
+                                    <dt>London 8on8</dt>
+                                    <dd>
+                                        <div>S/S 2018</div>
+                                       
+                                        <p>
+                                        </p>
+                                       
+                                       
+                                    </dd>
+                                </dl>
+                             
+                            </div>
+                        </li>
+    
+                        <li class="card">
+                            <div class="visual">
+                                  <img src="./images/tt.jpg">
+                                 
+                            </div>
+                            <div class="info">
+                                <dl>
+                                    <dt>Seoul Dozoh</dt>
+                                    <dd>
+                                        <div>12th October 2017</div>
+                                       
+                                        <p>
+                                               
+                                        </p>
+                                       
+                                    </dd>
+                                </dl>
+                             
+                            </div>
+                        </li>
+    
+                        <li class="card">
+                            <div class="visual">
+                                  <img src="./images/s.jpg">
+                                
+                            </div>
+                            <div class="info">
+                                <dl>
+                                    <dt>Vogue</dt>
+                                    <dd>
+                                        <div>12th October 2016</div>
+                                        
+                                        <p>
+                                                
+                                        </p>
+                                        
+                                    </dd>
+                                </dl>
+                             
+                            </div>
+                        </li>
+    
+                        <li class="card">
+                            <div class="visual">
+                                  <img src="./images/cccc.jpg">
+                                 
+                            </div>
+                            <div class="info">
+                                <dl>
+                                    <dt>MUNN</dt>
+                                    <dd>
+                                        <div>4th</div>
+                                       
+                                        <p>
+                                              
+                                        </p>
+                                       
+                                    </dd>
+                                </dl>
+                             
+                            </div>
+                        </li>
+    
+                        <li class="card">
+                            <div class="visual">
+                                  <img src="./images/hh.jpg">
+                                  
+                            </div>
+                            <div class="info">
+                                <dl>
+                                    <dt>Fashion Awards</dt>
+                                    <dd>
+                                        <div>2019</div>
+                                        
+                                        <p>
+                                               
+                                        </p>
+                                        
+                                    </dd>
+                                </dl>
+                             
+                            </div>
+                        </li>
+    
+                        <li class="card">
+                            <div class="visual">
+                                  <img src="./images/ffff.jpg">
+                                  
+                            </div>
+                            <div class="info">
+                                <dl>
+                                    <dt>LesHommes</dt>
+                                    <dd>
+                                        <div>2018</div>
+                                       
+                                    </dd>
+                                </dl>
+                             
+                            </div>
+                        </li>  
+    
+             <div class="clear"></div>
+                    </ul>
+                </div>
+            </div>
+
+
+            <br><br/>  
+            <br><br/> 
+            <br><br/>  
+            <br><br/> 
+
+
+            <h1>INSTAGRAM</h1>
+            <div id="banner">
+                    <ul class="slide">
+                        <li id="b_s">
+                            <img src="./images/zzzzz.jpg" alt="slide image">
+                        </li>
+                        <li id="b_s">
+                            <img src="./images/sss.jpg" alt="slide image">
+                        </li>
+                        <li id="b_s">
+                            <img src="./images/aqq.jpg" alt="slide image">
+                        </li>
+                    </ul>
+                </div>
+                <script>
+            
+            
+                function slide(){
+                    $('.slide').animate({left:-700}, function(){
+                        $('.slide li:first').appendTo('.slide');
+                        $('.slide').css({left:0})
+                    })
+                }
+            
+                setInterval(slide, 2100)
+                </script>
+            
+
+
+            
+        <br><br/>
+        <br><br/>
+        <br><br/>
+                <style>
+                    #copyright{
+                        text-align:left;
+                    }
+                    #footer_left{
+                        font-size: 16px;
+                    }
+                </style>
+        <div id="index_footer">    
+                <footer>        
+                    <div id="footer_left">
+                        <ul>
+                            <li>Home</li>
+                            <li>About</li>
+                            <li>Service</li>
+                            <li>Work</li>
+                            <li>Blog</li>
+                            <li>Contact Us</li>
+                            <div class="clear"></div><!--float left 해제-->
+                        </ul>
+                        <div id="copyright">ⓒ 2013 BlueBox. All Right Reserved.</div>
+        
+                        <div>
+                        the loges in the design are the property
+                            of their respective owner/copyright
+                            holders.
+                        </div>
+                    </div>
+                    <ul id="footer_right"> <!-- 오른편 상자 역할 -->
+                        <li><img src= "images/layout1_footer_icon1.png"/></li>
+                        <li><img src= "images/layout1_footer_icon2.png"/></li>
+                        <li><img src= "images/layout1_footer_icon3.png"/></li>
+                        <li><img src= "images/layout1_footer_icon4.png"/></li>
+                        <li><img src= "images/layout1_footer_icon5.png"/></li>
+                        <li><img src= "images/layout1_footer_icon6.png"/></li>
+                        <div class="clear"></div><!--float left 해제-->
+                    </ul>
+                    <div class="clear"></div><!--float left 해제-->        
+                </footer>
+            </div>
+    </body>
+</html>  
+        
